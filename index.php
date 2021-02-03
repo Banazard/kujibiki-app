@@ -11,8 +11,9 @@
     <title>くじ引きアプリ</title>
 </head>
 <body>
+    <h1>くじ引きアプリ</h1>
     <div>
-        <form action="index.php" method="GET">
+        <form action="kuji-do.php" method="POST">
             <div>
                 <label for="name">くじの名前</label>
                 <input type="text" id="name" name="kuji-name">
@@ -22,10 +23,17 @@
                 <input type="text" id="element1" name="elements">
             </div>
             <div>
-                <input type="submit" class="button" value="要素を増やす">
-                <input type="submit" class="button" value="くじ引き開始">
+                
+                <input type="submit" class="button" value="入力内容を表示">
             </div>
         </form>
+        <div>
+            <form action="add-element.php" method="POST">
+                <input type="submit" class="button" value="要素を増やす">
+            </form>
+        </div>
+        
     </div>
+    
 </body>    
 </html>

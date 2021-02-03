@@ -1,6 +1,6 @@
 <?php
-    $comment = $_GET['comment'];
-    echo $comment;
+    $elements = $_GET['elements'];
+    echo $elements;
 ?>
 <!DOCTYPE html>
 <html lang = "ja">

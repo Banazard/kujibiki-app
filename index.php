@@ -31,19 +31,23 @@
                 <input type="text" id="element1" name="elements[]">
             </div>
             <div>
-                <input type="submit" class="button" value="入力内容を表示">
+                <input type="submit" class="button" value="くじ実行">
             </div>
         </form>
         <div>
             <form action="add-element.php" method="POST">
-                <input type="submit" class="button" value="要素を増やす">
+                <input type="submit" class="button" value="要素を増やす（未実装）">
             </form>
         </div>
         <?php
             print @$_POST['kuji-name'] . " ";
-            for ($i = 0; $i < count(@$_POST["elements"]); $i++) {
-                echo @$_POST["elements"][$i]. " ";
-            } 
+            $elements = @$_POST["elements"];
+            shuffle($elements);
+            echo $elements[0];
+            
+            //for ($i = 0; $i < count($elements); $i++) {
+            //    echo $elements[$i]. " ";
+            //} 
             
             
         ?>

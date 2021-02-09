@@ -31,14 +31,9 @@
                 <input type="text" id="element1" name="elements[]">
             </div>
             <div>
-                <input type="submit" class="button" value="くじ実行">
+                <input type="submit" class="button" value="実行">
             </div>
         </form>
-        <div>
-            <form action="add-element.php" method="POST">
-                <input type="submit" class="button" value="要素を増やす（未実装）">
-            </form>
-        </div>
         <?php
             print @$_POST['kuji-name'] . " ";
             $elements = @$_POST["elements"];

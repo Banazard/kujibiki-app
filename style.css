@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body {
+    padding: 50px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-bottom: 10px;
+}

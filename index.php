@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     
     <title>くじ引きアプリ</title>
@@ -18,30 +18,31 @@
     <div class="container">
         <h1>くじ引きアプリ</h1>
         <form action="index.php" method="POST">
-            <div class="form-group col-md-6 col-lg-6 mx-auto">
+            <div class="form-group col-md-6 col-lg-6">
                 <label for="name" class="col-md-2 col-lg-2">くじの名前</label>
                 <div>
                     <input type="text" id="name" name="kuji-name" class="form-control">
                 </div>
             </div>
-            <div class="form-group col-md-6 col-lg-6 mx-auto">
+            <div class="form-group col-md-6 col-lg-6">
                 <label for="" class="col-md-2 col-lg-2">要素1</label>
                 <input type="text" id="element1" name="elements[]" class="form-control">
             </div>
-            <div class="form-group col-md-6 col-lg-6 mx-auto">
+            <div class="form-group col-md-6 col-lg-6">
                 <label for="" class="col-md-2 col-lg-2">要素2</label>
                 <input type="text" id="element1" name="elements[]" class="form-control">
             </div>
-            <div class="form-group col-md-6 col-lg-6 mx-auto">
+            <div class="form-group col-md-6 col-lg-6">
                 <label for="" class="col-md-2 col-lg-2">要素3</label>
                 <input type="text" id="element1" name="elements[]" class="form-control">
             </div>
-            <div class="col-md-4 col-lg-4 mx-auto">
+            <div class="col-md-4 col-lg-4">
                 <input type="submit" class="btn btn-primary btn-block" value="実行">
             </div>
         </form>
         <?php
-            print @$_POST['kuji-name'] . " ";
+            echo @$_POST['kuji-name'] . "のくじ引き結果";
+            echo "<br />";
             $elements = @$_POST["elements"];
             shuffle($elements);
             echo $elements[0];

@@ -17,7 +17,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <div class="container">
         <h1>くじ引きアプリ</h1>
-        <form action="index.php" method="POST">
+        <form action="kuji-do.php" method="POST">
             <div class="form-group col-md-6 col-lg-6">
                 <label for="name" class="col-md-2 col-lg-2">くじの名前</label>
                 <div>
@@ -40,19 +40,7 @@
                 <input type="submit" class="btn btn-primary btn-block" value="実行">
             </div>
         </form>
-        <?php
-            echo @$_POST['kuji-name'] . "のくじ引き結果";
-            echo "<br />";
-            $elements = @$_POST["elements"];
-            shuffle($elements);
-            echo $elements[0];
-            
-            //for ($i = 0; $i < count($elements); $i++) {
-            //    echo $elements[$i]. " ";
-            //} 
-            
-            
-        ?>
+        
     </div>
     
 </body>    
